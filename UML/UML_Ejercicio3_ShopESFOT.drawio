@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" modified="2026-11-15T20:20:00.000Z" agent="Mozilla/5.0" version="24.7.17" type="device">
+  <diagram id="diagram_1" name="Ejercicio 3 - ShopESFOT">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cls_tie" value="Tienda" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="360" height="326" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_tie" value="- catalogo : HashMap&amp;lt;String, Producto&amp;gt;&lt;br&gt;- carrito : ArrayList&amp;lt;Producto&amp;gt;&lt;br&gt;- cuponesValidos : HashSet&amp;lt;String&amp;gt;&lt;br&gt;- cuponesUsados : HashSet&amp;lt;String&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cls_tie">
+          <mxGeometry y="28" width="360" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="sep_tie" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#6c8ebf;" vertex="1" parent="cls_tie">
+          <mxGeometry y="110" width="360" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="meth_tie" value="+ Tienda()&lt;br&gt;+ registrarProducto(p: Producto) : boolean&lt;br&gt;+ obtenerProducto(codigo: String) : Producto&lt;br&gt;+ catalogoVacio() : boolean&lt;br&gt;+ getCatalogo() : Collection&amp;lt;Producto&amp;gt;&lt;br&gt;+ carritoVacio() : boolean&lt;br&gt;+ agregarAlCarrito(codigo: String) : void&lt;br&gt;+ agregarAlCarrito(codigo: String, cantidad: int) : void&lt;br&gt;+ calcularTotalCarrito() : double&lt;br&gt;+ pagar() : double&lt;br&gt;+ pagar(cupon: String) : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cls_tie">
+          <mxGeometry y="118" width="360" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_pro" value="Producto" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="510" y="30" width="460" height="236" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_pro" value="- codigo : String&lt;br&gt;- nombre : String&lt;br&gt;- precio : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cls_pro">
+          <mxGeometry y="28" width="460" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="sep_pro" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#6c8ebf;" vertex="1" parent="cls_pro">
+          <mxGeometry y="92" width="460" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="meth_pro" value="+ Producto(codigo: String, nombre: String, precio: double)&lt;br&gt;+ getCodigo() : String&lt;br&gt;+ getNombre() : String&lt;br&gt;+ getPrecio() : double&lt;br&gt;+ calcularPrecioFinal() : double&lt;br&gt;+ crearVariante(nuevoCodigo: String, nuevoPrecio: double) : Producto&lt;br&gt;+ toString() : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cls_pro">
+          <mxGeometry y="100" width="460" height="136" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_pfis" value="ProductoFisico" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="260" y="400" width="440" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_pfis" value="- pesoKg : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cls_pfis">
+          <mxGeometry y="28" width="440" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="sep_pfis" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#6c8ebf;" vertex="1" parent="cls_pfis">
+          <mxGeometry y="56" width="440" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="meth_pfis" value="+ ProductoFisico(codigo: String, nombre: String, precio: double, pesoKg: double)&lt;br&gt;+ ProductoFisico(codigo: String, nombre: String, precio: double)&lt;br&gt;+ getPesoKg() : double&lt;br&gt;+ calcularPrecioFinal() : double&lt;br&gt;+ crearVariante(nuevoCodigo: String, nuevoPrecio: double) : ProductoFisico&lt;br&gt;+ toString() : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cls_pfis">
+          <mxGeometry y="64" width="440" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="cls_pdig" value="ProductoDigital" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="730" y="400" width="430" height="164" as="geometry" />
+        </mxCell>
+        <mxCell id="attr_pdig" value="- tamanoMB : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cls_pdig">
+          <mxGeometry y="28" width="430" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="sep_pdig" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#6c8ebf;" vertex="1" parent="cls_pdig">
+          <mxGeometry y="56" width="430" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="meth_pdig" value="+ ProductoDigital(codigo: String, nombre: String, precio: double, tamanoMB: double)&lt;br&gt;+ getTamanoMB() : double&lt;br&gt;+ calcularPrecioFinal() : double&lt;br&gt;+ crearVariante(nuevoCodigo: String, nuevoPrecio: double) : ProductoDigital&lt;br&gt;+ toString() : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=6;spacingRight=6;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cls_pdig">
+          <mxGeometry y="64" width="430" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="agg_tie" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=diamondThin;startFill=0;startSize=12;endArrow=open;endFill=0;strokeWidth=1.5;strokeColor=#333333;" edge="1" parent="1" source="cls_tie" target="cls_pro">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="agg_tie_m1" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="agg_tie">
+          <mxGeometry x="-0.75" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="agg_tie_m2" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="agg_tie">
+          <mxGeometry x="0.75" y="-12" relative="1" as="geometry"><mxPoint as="offset" /></mxGeometry>
+        </mxCell>
+        <mxCell id="inh_pfis" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=12;strokeWidth=1.5;strokeColor=#333333;" edge="1" parent="1" source="cls_pfis" target="cls_pro">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="inh_pdig" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;endSize=12;strokeWidth=1.5;strokeColor=#333333;" edge="1" parent="1" source="cls_pdig" target="cls_pro">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
